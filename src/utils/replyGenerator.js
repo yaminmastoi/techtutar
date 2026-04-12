@@ -103,7 +103,7 @@ Flexbox and Grid are powerful layout systems in CSS.
 Would you like layout examples or styling techniques? 🎨`;
   }
 
-  if (q.includes("ai")) {
+  if (q.includes("ai", "artificial intelligence")) {
     return `AI stands for artificial intelligence.  
 It enables machines to perform tasks that require human intelligence.  
 AI uses data, algorithms, and models to learn patterns.  
