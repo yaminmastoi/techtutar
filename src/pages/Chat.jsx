@@ -7,6 +7,7 @@ export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const chatEndRef = useRef(null);
 
   const sendMessage = () => {
@@ -39,22 +40,46 @@ export default function Chat() {
     localStorage.removeItem("tempUser");
     navigate("/");
   };
+
   return (
     <div
       className={`chat-page ${messages.length === 0 ? "empty-chat" : "active"}`}
     >
-      <div className="sidebar">
+      {/* Sidebar */}
+      <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <h2>TechTutor AI</h2>
 
-        <button className="logout-btn" onClick={logout}>
+        {/* <button className="logout-btn" onClick={logout}>
           Logout
-        </button>
+        </button>*/}
       </div>
+
+      {/* Overlay (mobile) */}
+      {sidebarOpen && (
+        <div className="overlay" onClick={() => setSidebarOpen(false)}></div>
+      )}
 
       <div className="chat-main">
         <div className="top-bar">
           Powered By:{" "}
           <a href="https://mastoitechsolution.com/">Mastoi Tech Solution</a>
+          <button className="logout-icon-btn" onClick={logout} title="Logout">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1m0-10V4"
+              />
+            </svg>
+          </button>
         </div>
 
         <div className="chat-box">
@@ -75,16 +100,13 @@ export default function Chat() {
         <div className="chat-input">
           <input
             type="text"
-            placeholder="Ask Mastoi AI..."
+            placeholder="Ask TechTutar AI..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           />
 
           <button onClick={sendMessage}>➤</button>
-          {/* <div className="chat-disclaimer">
-            ⚠ Mastoi AI can make mistakes. Verify important information.
-          </div> */}
         </div>
       </div>
     </div>

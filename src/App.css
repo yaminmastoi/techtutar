@@ -45,7 +45,7 @@ SIDEBAR
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 40px;
-  color: #5865f2;
+  color: #cbccdb;
 }
 
 .logout-btn {
@@ -526,11 +526,6 @@ RESPONSIVE
   bottom: 0;
 }
 
-/* LANDING PAGE */
-/* GOOGLE FONT */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 /* MAIN LANDING */
 
 .landing {
@@ -714,9 +709,6 @@ RESPONSIVE
     gap: 25px;
   }
 }
-
-/* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 body,
 html {
@@ -964,7 +956,7 @@ html {
   text-align: center;
   padding: 20px 0;
   color: #888;
-  font-size: 15px ;
+  font-size: 15px;
 }
 
 /* MOBILE */
@@ -1014,4 +1006,61 @@ html {
   transform: scale(1.05);
   background: #5865f2;
   color: white;
+}
+
+/* ===== FINAL SIDEBAR SYSTEM ===== */
+
+.sidebar {
+  width: 250px;
+ background: linear-gradient(135deg, #5865f2, #7b84ff);
+  color: white;
+  padding: 20px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Top bar layout fix */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ICON LOGOUT BUTTON */
+.logout-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  /* Glass look */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #ff4d4d;
+  color: #ff4d4d;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.logout-icon-btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #ff7070);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.3);
+}
+
+/* Click effect */
+.logout-icon-btn:active {
+  transform: scale(0.95);
 }

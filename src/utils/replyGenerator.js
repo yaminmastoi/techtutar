@@ -398,7 +398,7 @@ It is important for SEO and branding.
 Easy-to-remember names are preferred.
 It simplifies internet navigation.`;
   }
-  
+
   if (
     q.includes("difference between procedural and object-oriented programming")
   ) {
@@ -878,12 +878,19 @@ Both approaches are used depending on application needs.`;
   if (q.includes("graphql resolver")) {
     return "A GraphQL resolver is a function responsible for fetching the data for a specific field in a GraphQL query. When a query is executed, the GraphQL engine calls resolvers to retrieve data from databases, APIs, or other sources. Each field in a query can have its own resolver. Resolvers work together to construct the final response. Internally, GraphQL parses the query, builds an execution plan, and invokes resolvers in a hierarchical manner. Resolvers enable flexibility in fetching data and allow clients to request exactly what they need, avoiding over-fetching or under-fetching.";
   }
+
+  if (q.includes("what is ram", "ram")) {
+    return "RAM (Random Access Memory) is a computer's high-speed, short-term memory that temporarily stores active data and applications for immediate access by the CPU. It enables fast read speeds for running tasks, but unlike a hard drive, it is volatile, meaning data is lost when the computer is turned off.  ";
+  }
+  if (q.includes("what is motherboard", "motherboard")) {
+    return "A motherboard is the main printed circuit board (PCB) in a computer that acts as the central hub, connecting all components CPU, memory, storage, and graphics card—and allowing them to communicate. It acts as the backbone or central nervous system, distributing power and enabling data flow between hardware.";
+  }
   // fallback
   return `I couldn't find a direct match for your query. You can try asking about:
 - Programming concepts
 - Web development
 - Backend systems
 - Databases
-- APIs <br/>
+- APIs 
 Please rephrase or include a specific keyword so I can assist you better.`;
 }
