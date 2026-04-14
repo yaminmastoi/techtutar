@@ -203,7 +203,7 @@ CHAT INPUT
 
 /* SEND BUTTON */
 
-.chat-input button {
+/* .chat-input button {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -213,7 +213,7 @@ CHAT INPUT
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
-}
+} */
 
 .chat-input button:hover {
   transform: scale(1.08);
