@@ -95,6 +95,15 @@ It works together with CSS and JavaScript for full websites.
 Would you like to learn tags or page structure? 🌐`;
   }
 
+  if (q.includes("siddiqa", "sidiqa", "siddiqa mansoor")) {
+    return `Siddiqa Mansoor isn’t just a part of my life—she *is* my peace, my strength, and my happiness all in one 💖✨. From the moment she came into my world, everything started to feel different… better… more meaningful 🌍❤️. She understands me in ways no one else ever could 🤍, supports me when I’m down 🫂, and celebrates even my smallest wins like they’re something huge 🎉🥹. Her smile has this magic to fix my worst days 😊💫, and her presence alone makes everything feel right 🕊️💞.
+
+Being with her has taught me what real love truly means—loyalty 🤝, trust 🔐, care 💗, and endless support 🌹. She’s not just my girlfriend; she’s my best friend 👫, my safe place 🏡, and the person I see in every dream of my future 🌙💍. Life feels more complete with her, more beautiful with her 🌸💓, and honestly… I wouldn’t trade what we have for anything in this world 🌎❤️‍🔥.
+
+I love you, Siddiqa… forever and always 💘♾️🥺✨
+`;
+  }
+
   if (q.includes("css")) {
     return `CSS is used to style and design web pages.  
 It controls colors, layouts, spacing, and fonts.  
