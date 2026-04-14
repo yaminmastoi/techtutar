@@ -1188,29 +1188,48 @@ html {
   padding: 10px;
   background: white;
   border-top: 1px solid #ddd;
+  backdrop-filter: blur(10px);
 }
+
+/* .chat-input {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 🔥 GAP ADDED */
+  /* background: #ffffff;
+  padding: 8px; */
+  /* border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1); */
+ */
 
 .chat-input input {
   flex: 1;
-  padding: 12px 14px;
+  padding: 12px 16px;
   border-radius: 25px;
-  border: 1px solid #ccc;
+  border: none;
   outline: none;
+  background: #f1f5f9;
   font-size: 14px;
 }
 
 .chat-input button {
   width: 45px;
   height: 45px;
-  border: none;
   border-radius: 50%;
+  border: none;
   background: #6366f1;
   color: white;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+}
+.chat-input button:hover {
+  background: #7c3aed;
+  transform: scale(1.1);
 }
 
 /* DISCLAIMER */
