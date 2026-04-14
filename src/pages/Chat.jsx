@@ -38,7 +38,7 @@ export default function Chat() {
   const logout = () => {
     localStorage.removeItem("userProfile");
     localStorage.removeItem("tempUser");
-    navigate("/");
+    navigate("/auth");
   };
 
   return (
