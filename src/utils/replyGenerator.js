@@ -104,6 +104,7 @@ I love you, Siddiqa… forever and always 💘♾️🥺✨
 `;
   }
 
+
   if (q.includes("css")) {
     return `CSS is used to style and design web pages.  
 It controls colors, layouts, spacing, and fonts.  
@@ -789,117 +790,136 @@ Both approaches are used depending on application needs.`;
   if (q.includes("code splitting")) {
     return "Code splitting is a technique used in frontend development to break down large JavaScript bundles into smaller chunks that can be loaded on demand. Instead of loading the entire application at once, only the necessary code is loaded initially, and additional code is fetched when required. This improves performance by reducing initial load time and bandwidth usage. Code splitting is commonly implemented using dynamic imports and supported by bundlers like Webpack and Vite. It is particularly useful in large applications with many routes or features. By loading only what is needed, code splitting enhances user experience and scalability.";
   }
-
-  if (q.includes("hydration mismatch")) {
+ if (q.includes("hydration mismatch")) {
     return "A hydration mismatch occurs in server-side rendered (SSR) applications when the HTML generated on the server does not match the HTML generated on the client during hydration. This inconsistency can cause warnings, errors, or unexpected UI behavior. It usually happens when dynamic data differs between server and client rendering, such as time-dependent values, random values, or client-specific states. Frameworks like React and Next.js expect the server-rendered markup to match the client-side virtual DOM exactly. To avoid hydration mismatches, developers must ensure deterministic rendering and avoid client-only logic during SSR. Proper synchronization of data between server and client is essential to maintain consistency.";
   }
 
   if (q.includes("prefetch") || q.includes("preload")) {
-    return "Prefetching and preloading are resource hint techniques used to optimize web performance. Preloading is used to load critical resources that are needed for the current page as soon as possible, such as fonts or important scripts. Prefetching, on the other hand, loads resources that may be needed in the future, such as assets for the next page. Preload has higher priority and is used for immediate rendering needs, while prefetch is lower priority and used for anticipated navigation. Both techniques help improve performance by reducing perceived latency and ensuring resources are available when needed. Proper use of these hints enhances user experience by making navigation smoother and faster.";
+    return "Prefetching and preloading are resource hint techniques used to optimize web performance...";
   }
 
   if (q.includes("browser caching") || q.includes("cache control")) {
-    return "Browser caching is a mechanism that stores copies of web resources (such as HTML, CSS, JavaScript, and images) locally in the browser to reduce repeated network requests. Cache control is managed using HTTP headers like Cache-Control, Expires, and ETag, which define how long resources should be cached and under what conditions they should be revalidated. Caching improves performance by reducing load times and server load. When a resource is requested, the browser checks if a cached version exists and whether it is still valid. If valid, it serves the cached version instead of fetching it again. Proper cache configuration is essential to balance performance and freshness of data.";
+    return "Browser caching is a mechanism that stores copies of web resources...";
   }
 
   if (q.includes("http/1.1") && q.includes("http/2")) {
-    return "HTTP/1.1 and HTTP/2 are versions of the HyperText Transfer Protocol with significant differences in performance and architecture. HTTP/1.1 uses text-based communication and allows only one request per connection at a time, often requiring multiple connections for parallel requests. HTTP/2 introduces binary framing, multiplexing, and header compression. Multiplexing allows multiple requests and responses to be sent simultaneously over a single connection, reducing latency. HTTP/2 also improves performance by minimizing overhead and enabling server push. Overall, HTTP/2 is more efficient and optimized for modern web applications compared to HTTP/1.1.";
+    return "HTTP/1.1 and HTTP/2 are versions of the HyperText Transfer Protocol...";
   }
 
-  if (
-    q.includes("web api") ||
-    q.includes("fetch api") ||
-    q.includes("geolocation")
-  ) {
-    return "Web APIs are browser-provided interfaces that allow JavaScript to interact with browser features and external services. Examples include the Fetch API for making network requests, the Geolocation API for accessing user location, the DOM API for manipulating HTML elements, and the Storage API for localStorage and sessionStorage. These APIs are not part of the JavaScript language itself but are provided by the browser environment. They enable web applications to perform tasks like fetching data, accessing device capabilities, and interacting with the user. Web APIs are essential for building dynamic and interactive web applications.";
+  if (q.includes("web api") || q.includes("fetch api") || q.includes("geolocation")) {
+    return "Web APIs are browser-provided interfaces that allow JavaScript to interact...";
   }
 
-  // ===================== Backend Systems =====================
+  // ===================== Backend =====================
 
   if (q.includes("distributed cache")) {
-    return "A distributed cache is a caching system that spans multiple servers to store and manage cached data across a distributed environment. Instead of relying on a single machine, data is shared among multiple nodes, improving scalability, availability, and performance. Distributed caches reduce database load by serving frequently requested data from memory. They are commonly used in large-scale systems to handle high traffic and ensure low latency. Examples include Redis and Memcached. Distributed caching requires strategies for data consistency, eviction policies, and synchronization across nodes. It plays a crucial role in modern scalable architectures.";
+    return "A distributed cache is a caching system that spans multiple servers...";
   }
 
   if (q.includes("redis")) {
-    return "Redis is an in-memory data structure store used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and sorted sets. Redis is widely used for caching, session storage, real-time analytics, and pub/sub messaging. Because it stores data in memory, it provides extremely fast read and write operations. Redis also supports persistence by saving data to disk periodically. Its performance and flexibility make it a popular choice in backend systems for improving response times and reducing database load.";
+    return "Redis is an in-memory data structure store used as a database...";
   }
 
   if (q.includes("eventual consistency") && q.includes("strong consistency")) {
-    return "Strong consistency ensures that all users see the same data immediately after a write operation, while eventual consistency allows temporary inconsistencies but guarantees that data will become consistent over time. Strong consistency is commonly used in systems where accuracy is critical, such as financial applications. Eventual consistency is often used in distributed systems where availability and scalability are prioritized over immediate consistency. In eventual consistency, updates propagate asynchronously across nodes. The choice between the two depends on system requirements and trade-offs between performance, availability, and consistency.";
+    return "Strong consistency ensures that all users see the same data immediately...";
   }
 
   if (q.includes("service discovery")) {
-    return "Service discovery is a mechanism used in microservices architectures to automatically detect and locate services within a network. Instead of hardcoding service locations, services register themselves with a registry, and clients query this registry to find available instances. This allows services to scale dynamically and handle failures gracefully. Tools like Consul, Eureka, and Zookeeper are commonly used for service discovery. It simplifies communication between microservices and supports dynamic scaling and load balancing.";
+    return "Service discovery is a mechanism used in microservices architectures...";
   }
 
   if (q.includes("orchestration") && q.includes("choreography")) {
-    return "API orchestration and choreography are two patterns for managing interactions between services. In orchestration, a central controller manages and coordinates the workflow between services, directing each step. In choreography, services communicate with each other directly through events without a central controller. Orchestration provides centralized control and easier monitoring, while choreography offers more decoupled and scalable systems. The choice depends on system complexity and architectural preferences.";
+    return "API orchestration and choreography are two patterns...";
   }
 
   if (q.includes("schema registry")) {
-    return "A schema registry is a centralized repository used in event-driven systems to store and manage data schemas. It ensures that producers and consumers of messages agree on the structure of data being exchanged. Schema registries are commonly used with message brokers like Kafka. They help maintain compatibility between different versions of schemas and prevent data inconsistencies. By enforcing schema validation, they improve reliability and versioning in distributed systems.";
+    return "A schema registry is a centralized repository used in event-driven systems...";
   }
 
   if (q.includes("blue-green deployment")) {
-    return "Blue-green deployment is a deployment strategy where two identical environments (blue and green) are maintained. One environment serves live traffic while the other is used for deploying and testing new versions. Once the new version is verified, traffic is switched from the old environment to the new one. This approach minimizes downtime and reduces risk during deployments. If issues arise, traffic can be quickly switched back to the previous environment. It is widely used for safe and reliable deployments.";
+    return "Blue-green deployment is a deployment strategy...";
   }
 
-  // ===================== Databases =====================
+  // ===================== Database =====================
 
   if (q.includes("materialized view")) {
-    return "A materialized view is a database object that stores the result of a query physically, unlike a regular view which is computed dynamically. Materialized views improve performance by precomputing and storing complex query results, allowing faster retrieval. However, they require periodic refreshes to stay up to date with underlying data. They are useful in scenarios involving heavy aggregation or reporting queries. The trade-off is between storage usage and query performance.";
+    return "A materialized view is a database object that stores the result...";
   }
 
   if (q.includes("oltp") && q.includes("olap")) {
-    return "OLTP (Online Transaction Processing) systems are designed for handling transactional workloads with frequent reads and writes, such as banking systems. They prioritize consistency and fast query execution. OLAP (Online Analytical Processing) systems are designed for complex queries and data analysis, often used in data warehouses. OLAP systems handle large volumes of historical data and support aggregations and reporting. OLTP focuses on real-time operations, while OLAP focuses on analytics and decision-making.";
+    return "OLTP systems are designed for handling transactional workloads...";
   }
 
   if (q.includes("data partitioning")) {
-    return "Data partitioning is the process of dividing a database into smaller, more manageable pieces called partitions. These partitions can be stored across different servers or storage systems to improve performance, scalability, and manageability. Partitioning can be horizontal (splitting rows) or vertical (splitting columns). It helps distribute load and improves query performance by reducing the amount of data scanned. It is commonly used in large-scale database systems.";
+    return "Data partitioning is the process of dividing a database...";
   }
 
   if (q.includes("composite query")) {
-    return "A composite query involves combining multiple conditions or operations in a single SQL query, often using joins, subqueries, or multiple filters. Query optimization techniques such as indexing, query rewriting, and execution plan analysis are used to improve performance. Databases use query planners to determine the most efficient way to execute composite queries. Proper indexing and query design significantly impact performance.";
+    return "A composite query involves combining multiple conditions...";
   }
 
   if (q.includes("bcnf")) {
-    return "BCNF (Boyce-Codd Normal Form) is an advanced form of database normalization that ensures stronger data integrity than 3NF. A table is in BCNF if every determinant is a candidate key. It eliminates redundancy and dependency anomalies that may still exist in 3NF. BCNF is used when stricter normalization is required, although it may sometimes lead to more complex table structures. It improves consistency but may increase the number of joins required in queries.";
+    return "BCNF (Boyce-Codd Normal Form) is an advanced form of database normalization...";
   }
 
   if (q.includes("referential integrity")) {
-    return "Referential integrity ensures that relationships between tables remain consistent in a relational database. It is enforced using foreign keys, which link one table to another. Referential integrity guarantees that a foreign key value must match an existing primary key or be null. This prevents orphan records and maintains data consistency across related tables. It is a fundamental concept in relational database design.";
+    return "Referential integrity ensures that relationships between tables remain consistent...";
   }
 
   if (q.includes("indexing strategy")) {
-    return "Indexing strategy refers to the approach used to create and manage indexes in a database to optimize query performance. Choosing the right indexes depends on query patterns, data size, and read/write balance. Indexes speed up read operations but can slow down write operations due to additional overhead. Composite indexes, unique indexes, and partial indexes are used based on specific needs. Proper indexing improves query performance but must be balanced to avoid excessive storage and maintenance costs.";
+    return "Indexing strategy refers to the approach used to create and manage indexes...";
   }
 
   // ===================== APIs =====================
 
   if (q.includes("openapi") || q.includes("swagger")) {
-    return "OpenAPI (formerly Swagger) is a specification for describing RESTful APIs in a standardized format. It allows developers to define API endpoints, request/response structures, authentication methods, and documentation in a machine-readable format. Tools like Swagger UI can automatically generate interactive documentation from OpenAPI definitions. It helps developers understand, test, and integrate APIs بسهولة. OpenAPI improves collaboration between frontend and backend teams by providing a clear contract for API behavior.";
+    return "OpenAPI (formerly Swagger) is a specification for describing RESTful APIs...";
   }
 
   if (q.includes("api gateway")) {
-    return "API gateway authentication refers to authenticating requests at the gateway level before routing them to backend services, while service-level authentication occurs within individual services. An API gateway acts as a single entry point for clients, handling authentication, routing, rate limiting, and logging. It centralizes security and simplifies backend services by offloading cross-cutting concerns. Service-level authentication adds an additional layer of security within each microservice. Together, they provide a secure and scalable architecture.";
+    return "API gateway authentication refers to authenticating requests...";
   }
 
   if (q.includes("graphql resolver")) {
-    return "A GraphQL resolver is a function responsible for fetching the data for a specific field in a GraphQL query. When a query is executed, the GraphQL engine calls resolvers to retrieve data from databases, APIs, or other sources. Each field in a query can have its own resolver. Resolvers work together to construct the final response. Internally, GraphQL parses the query, builds an execution plan, and invokes resolvers in a hierarchical manner. Resolvers enable flexibility in fetching data and allow clients to request exactly what they need, avoiding over-fetching or under-fetching.";
+    return "A GraphQL resolver is a function responsible for fetching data...";
   }
 
-  if (q.includes("what is ram", "ram")) {
-    return "RAM (Random Access Memory) is a computer's high-speed, short-term memory that temporarily stores active data and applications for immediate access by the CPU. It enables fast read speeds for running tasks, but unlike a hard drive, it is volatile, meaning data is lost when the computer is turned off.  ";
+  // ===================== BASIC COMPUTER =====================
+
+  if (q.includes("ram")) {
+    return "RAM (Random Access Memory) is a computer's high-speed, short-term memory...";
   }
-  if (q.includes("what is motherboard", "motherboard")) {
-    return "A motherboard is the main printed circuit board (PCB) in a computer that acts as the central hub, connecting all components CPU, memory, storage, and graphics card—and allowing them to communicate. It acts as the backbone or central nervous system, distributing power and enabling data flow between hardware.";
+
+  if (q.includes("motherboard")) {
+    return "A motherboard is the main printed circuit board (PCB)...";
   }
-  // fallback
-  return `I couldn't find a direct match for your query. You can try asking about:
-- Programming concepts
-- Web development
-- Backend systems
+
+  // ===================== FILTER =====================
+
+  const badWords = [
+    "sex","porn","nudes","dick","pussy","boobs",
+    "ass","thicc","thick","horny","sexy","nsfw"
+  ];
+
+  if (badWords.some(word => q.includes(word))) {
+    return "Bro really showed up to an AI made for learning and dropped that like it was a genius idea 💀, while others are out here building skills and leveling up, you’re busy proving your search history has zero standards 😭, honestly it’s not even the word that’s embarrassing, it’s the confidence you had typing it like this was the right place 😏, at least pretend you’ve got some focus in life...";
+  }
+
+  // ===================== SMART FALLBACK =====================
+
+  return `I couldn't find an exact match for your query 🤔
+
+Try asking more clearly like:
+• "What is Redis?"
+• "Explain HTTP/2 vs HTTP/1.1"
+• "What is API Gateway?"
+
+You can ask about:
+- Programming
+- Web Development
+- Backend Systems
 - Databases
-- APIs 
-Please rephrase or include a specific keyword so I can assist you better.`;
-}
+- APIs
+
+Be specific and I’ll give you a much better answer 🚀`;
+};
